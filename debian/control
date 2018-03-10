@@ -1,0 +1,33 @@
+Source: h11
+Maintainer: Matthias Urlichs <matthias@urlichs.de>
+Section: python
+Priority: optional
+Build-Depends: dh-python, python3-setuptools, python3-all, debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://github.com/njsmith/h11
+
+Package: python3-h11
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: A pure-Python, bring-your-own-I/O implementation of HTTP/1.1
+ h11
+ ===
+ .
+ .. image:: https://travis-ci.org/njsmith/h11.svg?branch=master
+    :target: https://travis-ci.org/njsmith/h11
+    :alt: Automated test status
+ .
+ .. image:: https://codecov.io/gh/njsmith/h11/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/njsmith/h11
+    :alt: Test coverage
+ .
+ .. image:: https://readthedocs.org/projects/h11/badge/?version=latest
+    :target: http://h11.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+ .
+ This is a little HTTP/1.1 library written from scratch in Python,
+ heavily inspired by `hyper-h2 <https://hyper-h2.readthedocs.io/>`_.
+ .
+ It's a "bring-your-own-I/O" library; h11 contains no IO code
+ whatsoever. This means you can hook h11 up to your favorite network
+
