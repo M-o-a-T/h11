@@ -1,3 +1,9 @@
+h11 (0.7.0+dev-2) smurf; urgency=medium
+
+  * Merge upstream
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Sat, 10 Mar 2018 17:55:45 +0100
+
 h11 (0.7.0+dev-1) smurf; urgency=low
 
   * source package automatically created by stdeb 0.8.5
