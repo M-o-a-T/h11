@@ -3,8 +3,8 @@ History of changes
 
 .. currentmodule:: h11
 
-vNEXT (????-??-??)
-------------------
+v0.8.0 (2018-03-20)
+-------------------
 
 Backwards **in**\compatible changes:
 
@@ -15,6 +15,12 @@ Backwards **in**\compatible changes:
   silently discard the whitespace). All these checks were already
   performed on incoming headers; this just extends that to outgoing
   headers.
+
+New features:
+
+* New method :meth:`Connection.send_failed`, to notify a
+  :class:`Connection` object when data returned from
+  :meth:`Connection.send` was *not* sent.
 
 Bug fixes:
 
@@ -29,6 +35,18 @@ Bug fixes:
 * The Expect: header `is case-insensitive
   <https://tools.ietf.org/html/rfc7231#section-5.1.1>`__, so use
   case-insensitive matching when looking for 100-continue.
+
+Other changes:
+
+* Better error messages in several cases.
+
+* Provide correct ``error_status_hint`` in exception raised when
+  encountering an invalid ``Transfer-Encoding`` header.
+
+* For better compatibility with broken servers, h11 now tolerates
+  responses where the reason phrase is missing (not just empty).
+
+* Various optimizations and documentation improvements.
 
 
 v0.7.0 (2016-11-25)

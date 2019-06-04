@@ -1,3 +1,9 @@
+h11 (0.8.0-1) unstable; urgency=medium
+
+  * Merge to release
+
+ -- Matthias Urlichs <matthias@urlichs.de>  Tue, 04 Jun 2019 20:22:25 +0200
+
 h11 (0.7.0+dev-2) smurf; urgency=medium
 
   * Merge upstream
