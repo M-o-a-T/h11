@@ -6,10 +6,12 @@ variables:
   USER: "root"
 
 before_script:
-  - "apt-get install curl"
-  - "curl https://gitlab.noris.net/${CI_PROJECT_NAMESPACE}/sourcemgr/raw/master/gitlab-ci | /bin/bash"
+  - "rm -rf ../.mgr"
+  - "git clone https://gitlab.noris.net/${CI_PROJECT_NAMESPACE}/sourcemgr ../.mgr"
+  - "(cd ../.mgr; git show --oneline)"
+  - "/bin/bash -x ../.mgr/gitlab-ci"
 stretch:
-  only:
+  only: 
     - tags
   image: 'docker-registry.noris.net/oci/debbuilder:stretch'
   script:
