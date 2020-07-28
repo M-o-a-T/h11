@@ -3,6 +3,49 @@ History of changes
 
 .. currentmodule:: h11
 
+v0.9.0 (2019-05-15)
+-------------------
+
+Bug fixes:
+
+* Allow a broader range of characters in header values. This violates
+  the RFC, but is apparently required for compatibility with
+  real-world code, like Google Analytics cookies (`#57
+  <https://github.com/python-hyper/h11/issues/57>`__, `#58
+  <https://github.com/python-hyper/h11/issues/58>`__).
+* Validate incoming and outgoing request paths for invalid
+  characters. This prevents a variety of potential security issues
+  that have affected other HTTP clients. (`#69
+  <https://github.com/python-hyper/h11/pull/69>`__).
+* Force status codes to be integers, thereby allowing stdlib
+  HTTPStatus IntEnums to be used when constructing responses (`#72
+  <https://github.com/python-hyper/h11/issues/72>`__).
+
+Other changes:
+
+* Make all sentinel values inspectable by IDEs, and split
+  ``SEND_BODY_DONE`` into ``SEND_BODY``, and ``DONE`` (`#75
+  <https://github.com/python-hyper/h11/pull/75>`__).
+* Drop support for Python 3.3.
+* LocalProtocolError raised in start_next_cycle now shows states for
+  more informative errors (`#80
+  <https://github.com/python-hyper/h11/issues/80>`__).
+
+v0.8.1 (2018-04-14)
+-------------------
+
+Bug fixes:
+
+* Always return headers as ``bytes`` objects (`#60
+  <https://github.com/python-hyper/h11/issues/60>`__)
+
+Other changes:
+
+* Added proper license notices to the Javascript used in our
+  documentation (`#61
+  <https://github.com/python-hyper/h11/issues/60>`__)
+
+
 v0.8.0 (2018-03-20)
 -------------------
 
@@ -57,7 +100,7 @@ New features (backwards compatible):
 * Made it so that sentinels are :ref:`instances of themselves
   <sentinel-type-trickiness>`, to enable certain dispatch tricks on
   the return value of :func:`Connection.next_event` (see `issue #8
-  <https://github.com/njsmith/h11/issues/8>`__ for discussion).
+  <https://github.com/python-hyper/h11/issues/8>`__ for discussion).
 
 * Added :data:`Data.chunk_start` and :data:`Data.chunk_end` properties
   to the :class:`Data` event. These provide the user information
@@ -65,21 +108,21 @@ New features (backwards compatible):
   peer when chunked transfer encoding is in use. You :ref:`probably
   shouldn't use these <chunk-delimiters-are-bad>`, but sometimes
   there's no alternative (see `issue #19
-  <https://github.com/njsmith/h11/issues/19>`__ for discussion).
+  <https://github.com/python-hyper/h11/issues/19>`__ for discussion).
 
 * Expose :data:`Response.reason` attribute, making it possible to read
   or set the textual "reason phrase" on responses (`issue #13
-  <https://github.com/njsmith/h11/pull/13>`__).
+  <https://github.com/python-hyper/h11/pull/13>`__).
 
 Bug fixes:
 
 * Fix the error message given when a call to an event constructor is
   missing a required keyword argument (`issue #14
-  <https://github.com/njsmith/h11/issues/14>`__).
+  <https://github.com/python-hyper/h11/issues/14>`__).
 
 * Fixed encoding of empty :class:`Data` events (``Data(data=b"")``)
   when using chunked encoding (`issue #21
-  <https://github.com/njsmith/h11/issues/21>`__).
+  <https://github.com/python-hyper/h11/issues/21>`__).
 
 v0.6.0 (2016-10-24)
 -------------------

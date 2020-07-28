@@ -42,22 +42,22 @@ other hand, the following are all very welcome:
 
 * Code should work across all currently supported Python releases.
 
-* Code should follow
-  [PEP 8](https://www.python.org/dev/peps/pep-0008/) style. We aren't
-  blind sticklers for this though (in fact,
-  [not being a blind stickler for PEP 8](https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds)
-  is one of the requirements in PEP 8!). If you run
-  [pycodestyle](https://github.com/PyCQA/pycodestyle) over the code
-  base then it complains about lots of things, but these are generally
-  places where "fixing the problem" would make the code less
-  readable. Still, though, when in doubt: PEP 8.
+* Code must be formatted using
+  [black](https://github.com/python/black) and
+  [isort](https://github.com/timothycrosley/isort) as configured in
+  the project. With those projects installed the commands,
+
+      black h11/
+      isort --dont-skip __init__.py --apply --settings-path setup.cfg --recursive h11
+
+  will format your code for you.
 
 * If you change the code, then you have to also add or fix at least
   one test. (See below for how to run the test suite.) This helps us
   make sure that we won't later accidentally break whatever you just
   fixed, and undo your hard work.
 
-* [Statement and branch coverage](https://codecov.io/gh/njsmith/h11)
+* [Statement and branch coverage](https://codecov.io/gh/python-hyper/h11)
   needs to remain at 100.0%. But don't stress too much about making
   this work up front -- if you post a pull request, then the codecov
   bot will automatically post a reply letting you know whether you've
@@ -90,7 +90,7 @@ other hand, the following are all very welcome:
   from all backgrounds.
 
 * Respect our
-  [code of conduct](https://github.com/njsmith/h11/blob/master/CODE_OF_CONDUCT.md>)
+  [code of conduct](https://github.com/python-hyper/h11/blob/master/CODE_OF_CONDUCT.md>)
   in all project spaces.
 
 
@@ -99,7 +99,7 @@ other hand, the following are all very welcome:
 You don't have to sign a license agreement or anything to contribute
 to h11 -- just make your changes and submit a pull request! (Though
 you should probably review the
-[MIT license we use](https://github.com/njsmith/h11/blob/master/LICENSE.txt)
+[MIT license we use](https://github.com/python-hyper/h11/blob/master/LICENSE.txt)
 and make sure you're happy licensing your contribution under those
 terms.)
 

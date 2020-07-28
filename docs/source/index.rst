@@ -44,11 +44,11 @@ whatever. But h11 makes it much easier to implement something like
 Vital statistics
 ----------------
 
-* Requirements: Python 2.7 or Python 3.3+ (PyPy works great)
+* Requirements: Python 2.7 or Python 3.4+ (PyPy works great)
 
 * Install: ``pip install h11``
 
-* Sources and bug tracker: https://github.com/njsmith/h11
+* Sources and bug tracker: https://github.com/python-hyper/h11
 
 * Docs: https://h11.readthedocs.io
 
@@ -56,7 +56,7 @@ Vital statistics
 
 * Code of conduct: Contributors are requested to follow our `code of
   conduct
-  <https://github.com/njsmith/h11/blob/master/CODE_OF_CONDUCT.md>`_ in
+  <https://github.com/python-hyper/h11/blob/master/CODE_OF_CONDUCT.md>`_ in
   all project spaces.
 
 

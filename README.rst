@@ -1,12 +1,12 @@
 h11
 ===
 
-.. image:: https://travis-ci.org/njsmith/h11.svg?branch=master
-   :target: https://travis-ci.org/njsmith/h11
+.. image:: https://travis-ci.org/python-hyper/h11.svg?branch=master
+   :target: https://travis-ci.org/python-hyper/h11
    :alt: Automated test status
 
-.. image:: https://codecov.io/gh/njsmith/h11/branch/master/graph/badge.svg
-   :target: https://codecov.io/gh/njsmith/h11
+.. image:: https://codecov.io/gh/python-hyper/h11/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/python-hyper/h11
    :alt: Test coverage
 
 .. image:: https://readthedocs.org/projects/h11/badge/?version=latest
@@ -63,7 +63,7 @@ pleasantly symmetric API: the events you send as a client are exactly
 the ones that you receive as a server and vice-versa.
 
 `Here's an example of a tiny HTTP client
-<https://github.com/njsmith/h11/blob/master/examples/basic-client.py>`_
+<https://github.com/python-hyper/h11/blob/master/examples/basic-client.py>`_
 
 It also has `a fine manual <https://h11.readthedocs.io/>`_.
 
@@ -112,7 +112,7 @@ library.
 It has a test suite with 100.0% coverage for both statements and
 branches.
 
-Currently it supports Python 3 (testing on 3.3-3.6), Python 2.7, and PyPy.
+Currently it supports Python 3 (testing on 3.4-3.7), Python 2.7, and PyPy.
 (Originally it had a Cython wrapper for `http-parser
 <https://github.com/nodejs/http-parser>`_ and a beautiful nested state
 machine implemented with ``yield from`` to postprocess the output. But
@@ -150,7 +150,7 @@ details.
 .. code-block:: sh
 
   $ pip install h11
-  $ git clone git@github.com:njsmith/h11
+  $ git clone git@github.com:python-hyper/h11
   $ cd h11/examples
   $ python basic-client.py
 
@@ -163,5 +163,5 @@ MIT
 *Code of conduct?*
 
 Contributors are requested to follow our `code of conduct
-<https://github.com/njsmith/h11/blob/master/CODE_OF_CONDUCT.md>`_ in
+<https://github.com/python-hyper/h11/blob/master/CODE_OF_CONDUCT.md>`_ in
 all project spaces.
